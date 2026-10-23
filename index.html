@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fly Marine | Soluções e Importação Offshore</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== CONTATOS FLUTUANTES ===== */
+        .floating-contacts {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 9999;
+        }
+        .floating-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .floating-item.email {
+            background: #D44638;
+        }
+        .floating-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+        }
+        .floating-item svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+            display: block;
+        }
+        .floating-label {
+            position: absolute;
+            right: calc(100% + 12px);
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+        .floating-item:hover .floating-label {
+            opacity: 1;
+        }
+        @media (max-width: 480px) {
+            .floating-contacts {
+                bottom: 20px;
+                right: 20px;
+                gap: 10px;
+            }
+            .floating-item {
+                width: 48px;
+                height: 48px;
+            }
+            .floating-item svg {
+                width: 24px;
+                height: 24px;
+            }
+            .floating-label {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img id="logo" src="logo.webp" alt="Logo">FLY MARINE <span>OFFSHORE</span>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+    <div class="nav-container">
+        <nav>
+            <ul>
+                <li><a href="#home" data-i18n="nav_home">Início</a></li>
+                <li><a href="#produtos" data-i18n="nav_catalog">Catálogo</a></li>
+                <li><a href="mailto:comercial@flymarine.com.br" class="nav-email-link" data-i18n="nav_quote">Solicitar Cotação</a></li>
+            </ul>
+        </nav>
+        <div class="lang-switch">
+            <button data-lang="pt" class="brasil_btn"> </button>
+            <button data-lang="en" class="us_btn"> </button>
+        </div>
+    </div>
+</header>
+
+<section class="visual-banner">
+    <div class="banner-overlay">
+        <div class="banner-content">
+            <span class="location-tag">Macaé // RJ // Brasil</span>
+            <h2 data-i18n="banner_title">Excelência e Compromisso Offshore</h2>
+        </div>
+    </div>
+</section>
+
+<section style="display: flex; flex-direction: column; align-items: center; padding: 40px 20px; font-size: 1.1rem; color: var(--azul-marine); font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">
+    <h2 data-i18n="prod_desc">Trabalhamos com</h2>
+    <div class="category-strip">
+        <div class="cat-item" style="animation: fadeInUp 0.6s ease 0.1s backwards;">01 <span data-i18n="cat1">Elétrica VDE</span></div>
+        <div class="cat-item" style="animation: fadeInUp 0.6s ease 0.2s backwards;">02 <span data-i18n="cat2">Iluminação LED</span></div>
+        <div class="cat-item" style="animation: fadeInUp 0.6s ease 0.3s backwards;">03 <span data-i18n="cat3">Ferramentas</span></div>
+        <div class="cat-item" style="animation: fadeInUp 0.6s ease 0.4s backwards;">04 <span data-i18n="cat4">Hidráulica</span></div>
+        <div class="cat-item" style="animation: fadeInUp 0.6s ease 0.5s backwards;">05 <span data-i18n="cat5">EPIs & Vedações</span></div>
+    </div>
+</section>
+
+<section>
+    <div class="certifications-block">
+        <h3 data-i18n="certifications_subtitle" style="text-align: center;">Certificações</h3>
+        <div class="certifications-grid">
+            <div class="cert-item">
+                <img src="./image/icons/iso-9001.webp" alt="ISO">
+                <span data-i18n="cert_iso">ISO 9001</span>
+            </div>
+            <div class="cert-item">
+                <img src="./image/icons/crc_petobras.webp" alt="CRC">
+                <span data-i18n="cert_crc">CRC Petobras</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== NOVA SEÇÃO PRODUTOS EM GRADE COM EXPANSÃO ===== -->
+<section id="produtos" class="portfolio-minimal">
+    <div class="section-header">
+        <h2 data-i18n="portfolio_title">Destaques do Portfólio 2026</h2>
+        <p data-i18n="portfolio_desc">Clique em um produto para ver suas variações.</p>
+        <div class="line"></div>
+    </div>
+
+    <!-- Grade de produtos -->
+    <div class="product-grid" id="productGrid">
+        <!-- Os cards serão inseridos via JavaScript -->
+    </div>
+</section>
+
+<section id="sobre" class="about-section">
+    <div class="about-container">
+        <div class="about-text">
+            <span class="p-tag" data-i18n="about_tag">NOSSA ESSÊNCIA</span>
+            <h2 data-i18n="about_title">Compromisso com Resultado e Confiabilidade</h2>
+            <p data-i18n="about_p1">A Fly Marine Offshore foi criada para resolver desafios reais da operação offshore.</p>
+            <p data-i18n="about_p2">Nosso foco vai além do fornecimento: garantimos segurança operacional e previsibilidade.</p>
+        </div>
+    </div>
+
+    <div class="mvv-section">
+        <div class="mvv-header">
+            <h3 data-i18n="mvv_title">Missão, Visão e Valores</h3>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px; flex-wrap: wrap;">
+            <div class="mvv-card">
+                <div class="mvv-icon missao-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h4 data-i18n="mvv_missao_title">Missão</h4>
+                <p data-i18n="mvv_missao_desc">Fornecer soluções offshore confiáveis e certificadas que agregam segurança e eficiência operacional.</p>
+            </div>
+            <div class="mvv-card">
+                <div class="mvv-icon visao-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                </div>
+                <h4 data-i18n="mvv_visao_title">Visão</h4>
+                <p data-i18n="mvv_visao_desc">Ser referência em qualidade e confiabilidade na indústria offshore, reconhecida por excelência certificada.</p>
+            </div>
+            <div class="mvv-card">
+                <div class="mvv-icon valores-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        <path d="M9 10h.01M13 10h.01M16 10h.01"></path>
+                    </svg>
+                </div>
+                <h4 data-i18n="mvv_valores_title">Valores</h4>
+                <p data-i18n="mvv_valores_desc">Qualidade certificada, ética, compromisso e confiabilidade em cada operação e relacionamento.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="partners-section">
+    <div class="section-header">
+        <h2 data-i18n="partners_title">Parceiros</h2>
+        <p data-i18n="partners_desc">Trabalhamos com marcas reconhecidas e seguimos padrões rigorosos de qualidade.</p>
+        <div class="line"></div>
+    </div>
+    <div class="partners-block">
+        <h3 data-i18n="partners_subtitle">Parceiros</h3>
+        <div class="partners-grid">
+            <div class="partner-item"><img src="image/parceiros/parceiro1.webp" alt="Parceiro 1"></div>
+            <div class="partner-item"><img src="image/parceiros/parceiro2.webp" alt="Parceiro 2"></div>
+            <div class="partner-item"><img src="image/parceiros/parceiro3.webp" alt="Parceiro 3"></div>
+            <div class="partner-item"><img src="image/parceiros/parceiro4.webp" alt="Parceiro 4"></div>
+            <div class="partner-item"><img src="image/parceiros/parceiro5.webp" alt="Parceiro 5"></div>
+            <div class="partner-item"><img src="image/parceiros/parceiro6.webp" alt="Parceiro 6"></div>
+        </div>
+    </div>
+</section>
+
+<section id="home" class="hero-conversion">
+    <div class="hero-text">
+        <h1 data-i18n="hero_title">Soluções que Agregam Valor à sua Operação</h1>
+        <p data-i18n="hero_desc">Clareza, ética e cumprimento rigoroso de prazos.</p>
+    </div>
+    <div class="conversion-cards">
+        <div class="c-card">
+            <h3 data-i18n="catalog_title">Catálogo Completo</h3>
+            <p data-i18n="catalog_desc">Acesse as especificações técnicas.</p>
+            <button class="btn-main download-btn" data-i18n="download_btn">BAIXAR PDF</button>
+        </div>
+        <div class="c-card">
+            <h3 data-i18n="contact_title">Atendimento Técnico</h3>
+            <p data-i18n="contact_desc">Equipe pronta para ajudar.</p>
+            <a href="mailto:comercial@flymarine.com.br" class="btn-main" data-i18n="email_btn">ENVIAR E-MAIL</a>
+        </div>
+    </div>
+
+    <div class="floating-contacts">
+        <a href="https://wa.me/+5522992068097?text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank" class="floating-item whatsapp" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="white" width="28" height="28">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span class="floating-label">WhatsApp</span>
+        </a>
+        <a href="mailto:comercial@flymarine.com.br?subject=Contato%20via%20Site" class="floating-item email" aria-label="E-mail">
+            <svg viewBox="0 0 24 24" fill="white" width="28" height="28">
+                <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/>
+                <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/>
+            </svg>
+            <span class="floating-label">E-mail</span>
+        </a>
+    </div>
+</section>
+
+<footer>
+    <div class="copy">&copy; 2026 Fly Marine Offshore.</div>
+</footer>
+
+<script src="lang.js"></script>
+
+<!-- ===== SCRIPTS ===== -->
+
+<!-- Menu Hamburger -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menuToggle');
+        const navContainer = document.querySelector('.nav-container');
+        const navLinks = document.querySelectorAll('.nav-container a');
+
+        if (menuToggle && navContainer) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                this.classList.toggle('active');
+                navContainer.classList.toggle('active');
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    menuToggle.classList.remove('active');
+                    navContainer.classList.remove('active');
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!menuToggle.contains(e.target) && !navContainer.contains(e.target)) {
+                    menuToggle.classList.remove('active');
+                    navContainer.classList.remove('active');
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && menuToggle.classList.contains('active')) {
+                    menuToggle.classList.remove('active');
+                    navContainer.classList.remove('active');
+                }
+            });
+        }
+    });
+</script>
+
+<!-- Download PDF (mantido) -->
+<script>
+    window.portifolio_name = 'Portfolio Fly Marine 2026.pdf';
+    document.addEventListener('DOMContentLoaded', function() {
+        const downloadBtn = document.querySelector('.download-btn');
+        if (!downloadBtn) return;
+        downloadBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const fileName = window.portifolio_name || 'catalogo_fly_marine.pdf';
+            const pdfUrl = './Portfolio Fly Marine 2026.pdf';
+            fetch(pdfUrl)
+                .then(response => {
+                    if (!response.ok) throw new Error(`Erro HTTP: ${response.status}`);
+                    return response.blob();
+                })
+                .then(blob => {
+                    const link = document.createElement('a');
+                    link.href = URL.createObjectURL(blob);
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    setTimeout(() => URL.revokeObjectURL(link.href), 150);
+                })
+                .catch(error => {
+                    console.error('Falha ao baixar o PDF:', error);
+                    window.open(pdfUrl, '_blank');
+                });
+        });
+    });
+</script>
+
+<script>
+    // ============================================================
+    //  CARREGAR PRODUTOS DO JSON E RENDERIZAR GRADE
+    // ============================================================
+    async function loadProducts() {
+        const grid = document.getElementById('productGrid');
+        if (!grid) return;
+
+        try {
+            const response = await fetch('./produtos.json');
+            if (!response.ok) throw new Error('Erro ao carregar produtos.json');
+            const data = await response.json();
+            const produtos = data.produtos;
+
+            renderProductGrid(produtos, grid);
+        } catch (error) {
+            console.error('Falha ao carregar produtos:', error);
+            grid.innerHTML = '<p style="text-align:center;color:red;">Erro ao carregar produtos. Verifique o console.</p>';
+        }
+    }
+
+    function renderProductGrid(produtos, grid) {
+        grid.innerHTML = '';
+        window.productCatalog = produtos;
+        window.productGrid = grid;
+
+        produtos.forEach((produto, index) => {
+            // Pega a primeira imagem do array como principal
+            const imgSrc = produto.url_imagem && produto.url_imagem.length > 0 
+                ? produto.url_imagem[0] 
+                : './image/produtos/default.webp';
+
+            const hasSub = produto.subprodutos && produto.subprodutos.length > 0;
+
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            card.dataset.index = index;
+
+            let subHtml = '';
+            if (hasSub) {
+                subHtml = `
+                    <div class="subproducts" id="sub-${index}">
+                        <div class="subproducts-grid">
+                            ${produto.subprodutos.map(sub => {
+                                const subImg = sub.url_imagem && sub.url_imagem.length > 0 
+                                    ? sub.url_imagem[0] 
+                                    : './image/produtos/default.webp';
+                                return `
+                                    <div class="subproduct-item" data-sub-index="${produto.subprodutos.indexOf(sub)}">
+                                        <img class="subproduct-image" src="${subImg}" alt="${sub.nome}">
+                                        <div class="subproduct-info">
+                                            <h4 class="subproduct-name">${sub.nome}</h4>
+                                            <p class="subproduct-description">${sub.descricao || ''}</p>
+                                        </div>
+                                    </div>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            card.innerHTML = `
+                <img class="product-card-image" src="${imgSrc}" alt="${produto.nome}">
+                <div class="product-card-info">
+                    <h3 class="product-card-title">${produto.nome}</h3>
+                    <p class="product-card-desc">${produto.descricao || ''}</p>
+                    ${hasSub ? `
+                        <button class="product-card-toggle" data-index="${index}">
+                            Ver subprodutos
+                        </button>
+                    ` : `
+                        
+                    `}
+                </div>
+                ${subHtml}
+            `;
+
+            grid.appendChild(card);
+        });
+
+        document.querySelectorAll('.product-card-toggle:not([disabled])').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const index = this.dataset.index;
+                const subContainer = document.getElementById(`sub-${index}`);
+                if (subContainer) {
+                    const card = this.closest('.product-card');
+                    const isOpening = !subContainer.classList.contains('open');
+
+                    if (isOpening) {
+                        document.querySelectorAll('.subproducts.open').forEach(openContainer => {
+                            if (openContainer === subContainer) return;
+
+                            openContainer.classList.remove('open');
+                            const openCard = openContainer.closest('.product-card');
+                            const openButton = openCard.querySelector('.product-card-toggle');
+                            openCard.classList.remove('expanded');
+                            openButton.textContent = 'Ver subprodutos';
+                        });
+                    }
+
+                    if (isOpening && window.innerWidth > 768) {
+                        const cardBounds = card.getBoundingClientRect();
+                        const gap = 16;
+                        const viewportPadding = 24;
+                        const spaceOnLeft = cardBounds.left - gap - viewportPadding;
+                        const spaceOnRight = window.innerWidth - cardBounds.right - gap - viewportPadding;
+                        const openLeft = spaceOnLeft > spaceOnRight;
+                        const availableSpace = Math.max(spaceOnLeft, spaceOnRight);
+
+                        subContainer.style.setProperty('--subproducts-width', `${Math.min(520, availableSpace)}px`);
+                        subContainer.classList.toggle('open-left', openLeft);
+                    } else {
+                        subContainer.style.removeProperty('--subproducts-width');
+                        subContainer.classList.remove('open-left');
+                    }
+
+                    subContainer.classList.toggle('open', isOpening);
+                    card.classList.toggle('expanded', isOpening);
+                    this.textContent = isOpening ? 'Ocultar subprodutos' : 'Ver subprodutos';
+                }
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.subproducts, .product-card-toggle')) return;
+
+            document.querySelectorAll('.subproducts.open').forEach(openContainer => {
+                openContainer.classList.remove('open');
+                const openCard = openContainer.closest('.product-card');
+                openCard.classList.remove('expanded');
+                openCard.querySelector('.product-card-toggle').textContent = 'Ver subprodutos';
+            });
+        });
+
+        updateProductLanguage(document.documentElement.lang === 'en' ? 'en' : 'pt');
+    }
+
+    window.updateProductLanguage = function(lang) {
+        const produtos = window.productCatalog;
+        if (!produtos) return;
+
+        produtos.forEach((produto, index) => {
+            const card = window.productGrid.querySelector(`.product-card[data-index="${index}"]`);
+            if (!card) return;
+
+            card.querySelector('.product-card-title').textContent = lang === 'en' && produto.nome_en
+                ? produto.nome_en
+                : produto.nome;
+            card.querySelector('.product-card-desc').textContent = lang === 'en' && produto.descricao_en
+                ? produto.descricao_en
+                : (produto.descricao || '');
+
+            produto.subprodutos.forEach((sub, subIndex) => {
+                const subItem = card.querySelector(`.subproduct-item[data-sub-index="${subIndex}"]`);
+                if (!subItem) return;
+
+                subItem.querySelector('.subproduct-name').textContent = lang === 'en' && sub.nome_en
+                    ? sub.nome_en
+                    : sub.nome;
+                subItem.querySelector('.subproduct-description').textContent = lang === 'en' && sub.descricao_en
+                    ? sub.descricao_en
+                    : (sub.descricao || '');
+            });
+        });
+    };
+
+    document.addEventListener('DOMContentLoaded', loadProducts);
+</script>
+</body>
+</html>

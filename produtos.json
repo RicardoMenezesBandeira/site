@@ -1,0 +1,581 @@
+{
+    "produtos": [
+        {
+            "id": 1,
+            "nome": "Válvulas",
+            "nome_en": "Valves",
+            "url_imagem": [
+                "./image/produtos/valvulas/valvulas_globo_1.webp",
+                "./image/produtos/valvulas/valvulas_globo_2.webp",
+                "./image/produtos/valvulas/valvulas_globo_3.webp",
+                "./image/produtos/valvulas/valvulas_globo_4.webp",
+                "./image/produtos/valvulas/valvulas_borboleta_1.webp",
+                "./image/produtos/valvulas/valvulas_de_alivio_1.webp"
+            ],
+            "descricao": "Soluções em válvulas para controle, bloqueio e segurança em sistemas offshore.",
+            "descricao_en": "Valve solutions for control, isolation and safety in offshore systems.",
+            "subprodutos": [
+                {
+                    "nome": "Válvulas Globo",
+                    "nome_en": "Globe Valves",
+                    "descricao": "Válvulas globo para controle de fluxo em sistemas offshore.",
+                    "descricao_en": "Globe valves for flow control in offshore systems.",
+                    "url_imagem": [
+                        "./image/produtos/valvulas/valvulas_globo_1.webp",
+                        "./image/produtos/valvulas/valvulas_globo_2.webp",
+                        "./image/produtos/valvulas/valvulas_globo_3.webp",
+                        "./image/produtos/valvulas/valvulas_globo_4.webp"
+                    ]
+                },
+                {
+                    "nome": "Válvulas Borboleta",
+                    "nome_en": "Butterfly Valves",
+                    "descricao": "Válvulas borboleta para operações de grande diâmetro.",
+                    "descricao_en": "Butterfly valves for large-diameter operations.",
+                    "url_imagem": [
+                        "./image/produtos/valvulas/valvulas_borboleta_1.webp",
+                        "./image/produtos/valvulas/valvulas_borboleta_2.webp",
+                        "./image/produtos/valvulas/valvulas_borboleta_3.webp",
+                        "./image/produtos/valvulas/valvulas_borboleta_4.webp"
+                    ]
+                },
+                {
+                    "nome": "Válvulas de Alívio",
+                    "nome_en": "Relief Valves",
+                    "descricao": "Válvulas de segurança para alívio de pressão.",
+                    "descricao_en": "Safety valves for pressure relief.",
+                    "url_imagem": [
+                        "./image/produtos/valvulas/valvulas_de_alivio_1.webp",
+                        "./image/produtos/valvulas/valvulas_de_alivio_2.webp"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "nome": "Tinta",
+            "nome_en": "Paint",
+            "url_imagem": [
+                "./image/produtos/tintas/tinta_international.webp",
+                "./image/produtos/tintas/tinta_jotun.webp",
+                "./image/produtos/tintas/tinta_weg.webp"
+            ],
+            "descricao": "Tintas de alta performance para proteção offshore.",
+            "descricao_en": "High-performance paints for offshore protection.",
+            "subprodutos": [
+                {
+                    "nome": "Tinta Internacional",
+                    "nome_en": "International Paint",
+                    "descricao": "Tinta anti-corrosiva de alta performance, ideal para estruturas marítimas.",
+                    "descricao_en": "High-performance anti-corrosion paint, ideal for marine structures.",
+                    "url_imagem": [
+                        "./image/produtos/tintas/tinta_international.webp"
+                    ]
+                },
+                {
+                    "nome": "Tinta Jotun",
+                    "nome_en": "Jotun Paint",
+                    "descricao": "Revestimento epóxi para ambientes agressivos, com excelente aderência.",
+                    "descricao_en": "Epoxy coating for harsh environments with excellent adhesion.",
+                    "url_imagem": [
+                        "./image/produtos/tintas/tinta_jotun.webp"
+                    ]
+                },
+                {
+                    "nome": "Tinta Weg",
+                    "nome_en": "Weg Paint",
+                    "descricao": "Tinta industrial de alta durabilidade, resistente à corrosão.",
+                    "descricao_en": "Highly durable industrial paint resistant to corrosion.",
+                    "url_imagem": [
+                        "./image/produtos/tintas/tinta_weg.webp"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "nome": "EPI",
+            "nome_en": "PPE",
+            "url_imagem": [
+                "./image/produtos/epi/epi_1.webp"
+            ],
+            "descricao": "Equipamentos de proteção individual para segurança em ambientes offshore.",
+            "descricao_en": "Personal protective equipment for safety in offshore environments.",
+            "subprodutos": [
+                {
+                    "nome": "Capacetes de Segurança",
+                    "nome_en": "Safety Helmets",
+                    "descricao": "Capacetes resistentes a impactos, essenciais para proteção da cabeça.",
+                    "descricao_en": "Impact-resistant helmets essential for head protection.",
+                    "url_imagem": [
+                        "./image/produtos/epi/epi_1.webp"
+                    ]
+                },
+                {
+                    "nome":"Oculos de Proteção",
+                    "nome_en": "Protective Eyewear",
+                    "descricao": "Óculos de proteção com lentes resistentes a impactos e UV.",
+                    "descricao_en": "Protective eyewear with impact- and UV-resistant lenses.",
+                    "url_imagem": [
+                        "./image/produtos/epi/epi_6.webp"
+                    ]
+                },
+                {
+                    "nome": "Luvas de Proteção",
+                    "nome_en": "Protective Gloves",
+                    "descricao": "Luvas resistentes a cortes e abrasão, ideais para manuseio de materiais.",
+                    "descricao_en": "Cut- and abrasion-resistant gloves, ideal for material handling.",
+                    "url_imagem": [
+                        "./image/produtos/epi/epi_2.webp"
+                    ]
+                },
+                {
+                    "nome": "Botas de Segurança",
+                    "nome_en": "Safety Boots",
+                    "descricao": "Botas com biqueira de aço e solado antiderrapante, para proteção dos pés.",
+                    "descricao_en": "Boots with steel toes and non-slip soles for foot protection.",
+                    "url_imagem": [
+                        "./image/produtos/epi/epi_4.webp"
+                    ]
+                },
+                {
+                    "nome": "Protetores Auriculares",
+                    "nome_en": "Hearing Protectors",
+                    "descricao": "Protetores para redução de ruído, essenciais em ambientes barulhentos.",
+                    "descricao_en": "Noise-reduction protectors essential in loud environments.",
+                    "url_imagem": [
+                        "./image/produtos/epi/epi_5.webp"
+                    ]
+                },
+                {
+                    "nome": "Macacão de Proteção",
+                    "nome_en": "Protective Coveralls",
+                    "descricao": "Macacões resistentes a cortes e abrasão, ideais para manuseio de materiais.",
+                    "descricao_en": "Cut- and abrasion-resistant coveralls, ideal for material handling.",
+                    "url_imagem": [
+                        "./image/produtos/epi/epi_6.webp"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "nome": "SOPEP",
+            "nome_en": "SOPEP",
+            "url_imagem": [
+                "./image/produtos/sopep/kit_sopep_1.webp"
+            ],
+            "descricao": "Kits, produtos e equipamentos para vazemento de oleo.",
+            "descricao_en": "Kit, products and equipment for oil spill response.",
+            "subprodutos": [                
+                {
+                    "nome": "Barreira de Contenção",
+                    "nome_en": "Containment Boom",
+                    "descricao": "Barreiras flutuantes que bloqueiam e contem a área do vazamento.",
+                    "descricao_en": "Floating barriers that block and contain the spill area.",
+                    "url_imagem": [
+                        "./image/produtos/sopep/kit_sopep_2.webp"
+                    ]
+                },
+                {
+                    "nome": "recolhedores de óleo (Skimmer)",
+                    "nome_en": "Oil Skimmers",
+                    "descricao": "Dispositivos de Alto Recolhimento e eficiência que recolhem somente o óleo da água.",
+                    "descricao_en": "High-recovery and efficient devices that collect only oil from water.",
+                    "url_imagem": [
+                        "./image/produtos/sopep/kit_sopep_3.webp"
+                    ]
+                },
+                {
+                    "nome": "Bioturf",
+                    "nome_en": "Bioturf",
+                    "descricao": "Solução Ideal para limpeza de Hidrocarbonetos e Outros Produtos Químicos.",
+                    "descricao_en": "Ideal solution for cleaning hydrocarbons and other chemicals.",
+                    "url_imagem": [
+                        "./image/produtos/sopep/kit_sopep_4.avif"
+                    ]
+                },
+                {
+                    "nome": "Tanques",
+                    "nome_en": "Tanks",
+                    "descricao": "Ideal para o Armazenamento temporário do óleo retirado.",
+                    "descricao_en": "Ideal for temporary storage of recovered oil.",
+                    "url_imagem": [
+                        "./image/produtos/sopep/kit_sopep_5.webp"
+                    ]
+                },
+                {
+                    "nome": "Outros",
+                    "nome_en": "Other Items",
+                    "descricao": "Outros produtos que compõem o kit.",
+                    "descricao_en": "Other products included in the kit.",
+                    "url_imagem": [
+                        "./image/produtos/sopep/kit_sopep_6.webp"
+                    ]
+                },
+                {
+                    "nome": "Rolo absorventes",
+                    "nome_en": "Absorbent Rolls",
+                    "descricao": "Manta absorvente em rolo. Pode ser usada na água como em qualquer tipo de piso. Ideal como tapte para prevenir contaminação por passagem de pessoas em operalção.",
+                    "descricao_en": "Roll absorbent pad for use on water or any floor, ideal for preventing contamination from foot traffic during operations.",
+                    "url_imagem": [
+                        "./image/produtos/sopep/SOPEP_1.webp"
+                    ]
+                },
+                {
+                    "nome": "Cordões Absorventes",
+                    "nome_en": "Absorbent Socks",
+                    "descricao": "Devem ser suados para absorver o produto derramado quandto para contê-lo, ideal para derramamentos em qualquer tipo de piso, também pode ser usado na água.",
+                    "descricao_en": "Used to absorb and contain spilled product on any floor and can also be used on water.",
+                    "url_imagem": [
+                        "./image/produtos/sopep/SOPEP_2.webp"
+                    ]
+                },
+                {
+                    "nome": "Mantas Absorventes",
+                    "nome_en": "Absorbent Pads",
+                    "descricao": "Pode ser usada tanto na água como em qualquer tipo de piso.",
+                    "descricao_en": "Can be used on water or any type of floor.",
+                    "url_imagem": [
+                        "./image/produtos/sopep/SOPEP_3.webp"
+                    ]
+                },
+                {
+                    "nome": "Travesseiros Absorventes",
+                    "nome_en": "Absorbent Pillows",
+                    "descricao": "Ideal para derramamentos em qualquer tipo de piso, também pode ser usado na água, principalmento em porões de navios, gotejamento de máquinas e lovais com grande quantidade a ser recolhida.",
+                    "descricao_en": "Ideal for spills on any floor or on water, especially in ship holds, around dripping machinery and areas with large amounts to recover.",
+                    "url_imagem": [
+                        "./image/produtos/sopep/SOPEP_4.webp"
+                    ]
+                },
+                {
+                    "nome": "Barreiras Absorventes",
+                    "nome_en": "Absorbent Booms",
+                    "descricao": "Devem ser usados na água para absorção como para contenção do produto derramado, são equipadas com cabo de tração que permite que seja conectadas.",
+                    "descricao_en": "Used on water to absorb and contain spilled product, with a towing cable for connection.",
+                    "url_imagem": [
+                        "./image/produtos/sopep/SOPEP_5.webp"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "nome": "Elétrica",
+            "nome_en": "Electrical",
+            "url_imagem": [
+                "./image/produtos/eletrica/painel_eletrico_1.webp"
+            ],
+            "descricao": "Matérias elétricos para controle e distribuição de energia.",
+            "descricao_en": "Electrical materials for power control and distribution.",
+            "subprodutos": [
+                {
+                    "nome": "Painéis Elétricos",
+                    "nome_en": "Electrical Panels",
+                    "descricao": "Painéis elétricos para controle e distribuição de energia.",
+                    "descricao_en": "Electrical panels for power control and distribution.",
+                    "url_imagem": [
+                        "./image/produtos/eletrica/painel_eletrico_1.webp"
+                    ]
+                },
+                {
+                    "nome": "Cabos Elétricos PP",
+                    "nome_en": "Electrical Cables",
+                    "descricao": "Cabos elétricos para transmissão de energia e sinais.",
+                    "descricao_en": "Electrical cables for power and signal transmission.",
+                    "url_imagem": [
+                        "./image/produtos/eletrica/cabo_eletrico_1.webp"
+                    ]
+                },
+                {
+                    "nome": "Disjuntores",
+                    "nome_en": "Circuit Breakers",
+                    "descricao": "Dispositivos de proteção elétrica para evitar sobrecarga e curto-circuito.",
+                    "descricao_en": "Electrical protection devices to prevent overload and short circuits.",
+                    "url_imagem": [
+                        "./image/produtos/eletrica/disjuntor_1.webp"
+                    ]
+                },
+                {
+                    "nome": "Tomadas e Interruptores",
+                    "nome_en": "Sockets and Switches",
+                    "descricao": "Tomadas e interruptores para controle de energia elétrica.",
+                    "descricao_en": "Sockets and switches for electrical power control.",
+                    "url_imagem": [
+                        "./image/produtos/eletrica/tomada_interruptor_1.webp"
+                    ]
+                },
+                {
+                    "nome":"Cabos flexíveis",
+                    "nome_en":"Flexible Cables",
+                    "descricao":"Cabos flexíveis para diversas aplicações elétricas.",
+                    "descricao_en":"Flexible cables for various electrical applications.",
+                    "url_imagem":[
+                        "./image/produtos/eletrica/cabo_flexivel_1.webp"
+                    ]
+                }
+            ]
+        },
+        {
+            "id":6,
+            "nome":"Eletrica EX",
+            "nome_en":"Electrical EX",
+            "descricao":"Materiais elétricos à prova de explosão.",
+            "descricao_en":"Electrical materials for power control and distribution in classified areas.",
+            "url_imagem":[
+                "./image/produtos/eletrica_ex/painel_eletrico.webp"
+            ],
+            "subprodutos":[
+                {
+                    "nome":"Painéis Elétricos EX",
+                    "nome_en":"Electrical Panels EX",
+                    "descricao":"Painéis elétricos a prova de explosão para controle e distribuição de energia em áreas classificadas.",
+                    "descricao_en":"Explosion-proof electrical panels for power control and distribution in classified areas.",
+                    "url_imagem":[
+                        "./image/produtos/eletrica_ex/painel_eletrico.webp"
+                    ]
+                },
+                {
+                    "nome":"Eletrodutos",
+                    "nome_en":"Electrical Conduits EX",
+                    "descricao":"Eletrodutos à prova de explosão para proteção e condução de cabos em áreas classificadas.",
+                    "descricao_en":"Explosion-proof electrical conduits for protecting and routing cables in classified areas.",
+                    "url_imagem":[
+                        "./image/produtos/eletrica_ex/Eletroduto.webp"
+                    ]
+                },
+                {
+                    "nome":"Botoeiras",
+                    "nome_en":"Push-Button Stations EX",
+                    "descricao":"Botoeiras à prova de explosão para comando e controle de equipamentos em áreas classificadas.",
+                    "descricao_en":"Explosion-proof push-button stations for operating and controlling equipment in classified areas.",
+                    "url_imagem":[
+                        "./image/produtos/eletrica_ex/botoes.webp"
+                    ]
+                },
+                {
+                     "nome":"Iluminação",
+                     "nome_en":"Explosion-Proof Lighting",
+                     "descricao":"Sistemas de iluminação à prova de explosão para áreas classificadas.",
+                     "descricao_en":"Explosion-proof lighting systems for classified areas.",
+                     "url_imagem":[
+                         "./image/produtos/eletrica_ex/iluminacao.webp"
+                     ]
+                },
+                {
+                            "nome":"Tomadas",
+                            "nome_en":"Explosion-Proof Sockets",
+                            "descricao":"Tomadas à prova de explosão para controle de energia elétrica em áreas classificadas.",
+                            "descricao_en":"Explosion-proof sockets for electrical power control in classified areas.",
+                            "url_imagem":[
+                                "./image/produtos/eletrica_ex/Tomadas.webp"
+                            ]
+                },
+                {
+                            "nome":"Conexões",
+                            "nome_en":"Explosion-Proof Connections",
+                            "descricao":"Conexões à prova de explosão para instalações elétricas em áreas classificadas.",
+                            "descricao_en":"Explosion-proof connections for electrical installations in classified areas.",
+                            "url_imagem":[
+                                "./image/produtos/eletrica_ex/Conexao.webp"
+                            ]
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "nome": "Bandagem para Tubulação",
+            "nome_en": "Pipe Repair Bandage",
+            "url_imagem": [
+                "./image/produtos/bandagens/imagem_1.webp",
+                "./image/produtos/bandagens/imagem_2.webp",
+                "./image/produtos/bandagens/imagem_3.webp"
+            ],
+            "descricao": "Bandagens de reparo para tubulações em operação.",
+            "descricao_en": "Repair bandages for pipelines in operation.",
+            "subprodutos": [
+                {
+                    "nome": "TENOFINK",
+                    "nome_en": "TENOFINK",
+                    "descricao": "Sistema de bandagem para reparo e proteção de tubulações em operação.",
+                    "descricao_en": "Bandage system for repairing and protecting pipelines in operation.",
+                    "url_imagem": [
+                        "./image/produtos/bandagens/imagem_1.webp"
+                    ]
+                },
+                {
+                    "nome": "SEALUX",
+                    "nome_en": "SEALUX",
+                    "descricao": "Solução de vedação e reparo para tubulações e equipamentos industriais.",
+                    "descricao_en": "Sealing and repair solution for pipelines and industrial equipment.",
+                    "url_imagem": [
+                        "./image/produtos/bandagens/imagem_2.webp"
+                    ]
+                },
+                {
+                    "nome": "STOP IT",
+                    "nome_en": "STOP IT",
+                    "descricao": "Bandagem de reparo emergencial para conter vazamentos em tubulações.",
+                    "descricao_en": "Emergency repair bandage for containing leaks in pipelines.",
+                    "url_imagem": [
+                        "./image/produtos/bandagens/imagem_3.webp"
+                    ]
+                }
+            ]
+        },
+        
+        
+        {
+            "id": 8,
+            "nome": "Flanges galvanizados e em inox",
+            "nome_en": "Galvanized and stainless steel flanges",
+            "url_imagem": [
+                "./image/produtos/flanges/flange_1.webp"
+            ],
+            "descricao": "Flanges para tubulações.",
+            "descricao_en": "Flanges for pipelines.",
+            "subprodutos": [
+                {
+                    "nome": "Flange com Pescoço para Solda",
+                    "nome_en": "Welded neck flange",
+                    "descricao": "Flange com um pescoço cônico longo que é soldado diretamente ao tubo, ideal para condições severas como altas pressões e temperaturas.",
+                    "descricao_en": "Flange with a long tapered hub that is welded directly to the pipe, ideal for severe conditions such as high pressures and temperatures.",
+                    "url_imagem": [
+                        "./image/produtos/flanges/flange_1.webp"
+                    ]
+                },
+                {
+                    "nome": "Flange Deslizante",
+                    "nome_en": "Slip on flange",
+                    "descricao": "Flange que desliza sobre a extremidade do tubo antes de receber solda tanto na parte interna quanto na externa.",
+                    "descricao_en": "Flange that slips over the end of the pipe before being welded both on the inside and outside.",
+                    "url_imagem": [
+                        "./image/produtos/flanges/flange_2.webp"
+                    ]
+                },
+                {
+                    "nome": "Flange de Junta Sobreposta",
+                    "nome_en": "Lap joint flange",
+                    "descricao": "Flange usado em conjunto com uma extremidade ponta (stub end), facilitando o alinhamento dos furos dos parafusos.",
+                    "descricao_en": "Flange used in conjunction with a stub end, facilitating the alignment of bolt holes.",
+                    "url_imagem": [
+                        "./image/produtos/flanges/flange_3.webp"
+                    ]
+                },
+                {
+                    "nome": "Flange Roscado",
+                    "nome_en": "Screwed flange",
+                    "descricao": "Flange que possui rosca interna, permitindo a conexão ao tubo sem a necessidade de soldagem.",
+                    "descricao_en": "Flange that features internal threads, allowing connection to the pipe without the need for welding.",
+                    "url_imagem": [
+                        "./image/produtos/flanges/flange_4.webp"
+                    ]
+                },
+                {
+                    "nome": "Flange Cego",
+                    "nome_en": "Blind flanges",
+                    "descricao": "Flange sólido utilizado para bloquear a extremidade de tubulações, aberturas de vasos ou válvulas.",
+                    "descricao_en": "Solid flange used to block the end of pipelines, vessel openings, or valves.",
+                    "url_imagem": [
+                        "./image/produtos/flanges/flange_5.webp"
+                    ]
+                },
+                {
+                    "nome": "Flange Óculos",
+                    "nome_en": "Spectacle blind flange",
+                    "descricao": "Dispositivo em formato de óculos composto por uma parte fechada e outra aberta, usado para isolar ou liberar o fluxo em manutenções.",
+                    "descricao_en": "Spectacle-shaped device composed of a solid disc and an open ring, used to isolate or release flow during maintenance.",
+                    "url_imagem": [
+                        "./image/produtos/flanges/flange_6.webp"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "nome": "Parafusos",
+            "nome_en": "Bolts",
+            "url_imagem": [
+                "./image/produtos/parafusos/parafuso_sextavado.webp"
+            ],
+            "descricao": "Parafusos.",
+            "descricao_en": "Bolts.",
+            "subprodutos": [
+                {  
+                    "nome":"Parafusos sextavado",
+                    "nome_en": "Hex bolts",
+                    "descricao": "Parafusos com cabeça sextavada, utilizados em aplicações de alta resistência.",
+                    "descricao_en": "Bolts with hex heads, used in high-strength applications.",
+                    "url_imagem": [
+                        "./image/produtos/parafusos/parafuso_sextavado.webp"
+                    ]
+                },{
+                    "nome":"Parafuso estojo",
+                    "nome_en": "Stud bolts",
+                    "descricao": "Parafusos de alta resistência, utilizados em conexões de flanges e equipamentos industriais.",
+                    "descricao_en": "High-strength bolts used in flange connections and industrial equipment.",
+                    "url_imagem": [
+                        "./image/produtos/parafusos/parafuso_estojo.webp"
+                    ]
+                }
+            ]
+        },
+    {
+        "id": 10,
+        "nome": "Conexões em Inox, Galvanizado e Latão",
+        "nome_en": "Stainless steel, galvanized and brass fittings",
+        "url_imagem": [
+            "./image/produtos/conexoes/conexao_1.webp"
+        ],
+        "descricao": "Conexões metálicas para em aço carbono, latão e inox.",
+        "descricao_en": "Stainless steel, galvanized and brass fittings for pipelines.",
+        "subprodutos": [ ]
+    },
+    {
+        "id": 11,
+        "nome": "Tubos em Aço Carbono, Inox e Galvanizado",
+        "nome_en": "Carbon steel, stainless steel and galvanized pipes",
+        "url_imagem": [
+            "./image/produtos/tubos/tubo_1.webp"
+        ],
+        "descricao": "Tubos em Aço Carbono, Inox e Galvanizado para condução de fluidos.",
+        "descricao_en": "Carbon steel, stainless steel and galvanized pipes for fluid conveyance.",
+        "subprodutos": [ ]
+    },
+    {
+        "id": 12,
+        "nome": "Conexões em PVC e CPVC",
+        "nome_en": "PVC and CPVC fittings",
+        "url_imagem": [
+            "./image/produtos/conexoes/conexao_pvc_1.webp"
+        ],
+        "descricao": "Conexões em PVC e CPVC para tubulações.",
+        "descricao_en": "PVC and CPVC fittings for pipelines.",
+        "subprodutos": [ ]
+    },
+    {
+        "id": 13,
+        "nome": "Tubos em PVC e CPVC",
+        "nome_en": "PVC and CPVC pipes",
+        "url_imagem": [
+            "./image/produtos/tubos/tubo_pvc_1.webp"
+        ],
+        "descricao": "Tubos em PVC e CPVC para condução de fluidos.",
+        "descricao_en": "PVC and CPVC pipes for fluid conveyance.",
+        "subprodutos": [ ]
+    },
+
+        {
+            "id": 20,
+            "nome": "Vidros para escritorios",
+            "nome_en": "Office Glass",
+            "url_imagem": [
+                "./image/produtos/vidros/vidro.webp"
+            ],
+            "descricao": "Vidros em geral.",
+            "descricao_en": "General glass products.",
+            "subprodutos": []
+        }
+    ]
+}
