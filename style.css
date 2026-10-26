@@ -727,7 +727,7 @@ footer {
 }
 
 .visual-banner:hover .banner-overlay {
-    background: linear-gradient(135deg, rgba(26, 58, 90, 0.4) 0%, rgba(15, 23, 42, 0.8) 100%);
+    background: url('image/hero.webp') center / cover no-repeat;
 }
 
 .banner-content {
