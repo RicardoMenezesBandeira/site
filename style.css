@@ -535,22 +535,24 @@ nav a:hover::after {
 /* Responsividade para mobile */
 @media (max-width: 950px) {
     .category-strip {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
-        padding: 0 8px;
-        background-color: transparent;
-        border: none;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: 100%;
+        gap: 5px;
+        padding: 8px 12px;
+        overflow-x: auto;
+        background: white;
+        border-bottom: 2px solid var(--borda);
         box-shadow: none;
     }
 
     .cat-item {
-        font-size: 0.98rem;
-        padding: 12px 10px;
-        min-width: unset;
-        width: 100%;
-        background-color: transparent;
-        border: none;
+        flex: 0 0 auto;
+        width: auto;
+        font-size: 0.75rem;
+        padding: 10px 12px;
     }
 }
 
@@ -589,7 +591,7 @@ nav a:hover::after {
 @media (max-width: 480px) {
     .category-strip {
         justify-content: flex-start;
-        padding-left: 5%;
+        padding: 8px 5%;
         scroll-behavior: smooth;
     }
 }
@@ -1169,7 +1171,7 @@ footer {
 /* --- Novo Elemento Visual Hero --- */
 .visual-banner {
     height: clamp(250px, 50vh, 450px);
-    background-image: url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&q=80&w=1600');
+    background-image: url('image/hero.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1222,6 +1224,10 @@ footer {
         background-attachment: scroll;
     }
 
+    .banner-overlay {
+        background: rgba(15, 23, 42, 0.2);
+    }
+
     .banner-content h2 {
         letter-spacing: 0;
     }
@@ -1229,11 +1235,22 @@ footer {
 
 @media (max-width: 480px) {
     .visual-banner {
-        height: 200px;
+        height: 240px;
+    }
+
+    .banner-content {
+        padding: 24px 16px;
     }
 
     .location-tag {
-        letter-spacing: 2px;
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 12px;
+    }
+
+    .banner-content h2 {
+        font-size: clamp(1.4rem, 7vw, 1.8rem);
+        line-height: 1.2;
     }
 }
 
@@ -2028,5 +2045,289 @@ footer {
     .product-card-toggle {
         width: 100%;
         justify-content: center;
+    }
+}
+
+/* ============================================================
+   CORREÇÕES DE RESPONSIVIDADE MOBILE
+   ============================================================ */
+
+/* 0) Evita scroll horizontal — usa clip para não quebrar o
+      header sticky (hidden é fallback p/ navegadores antigos) */
+body {
+    overflow-x: hidden;
+    overflow-x: clip;
+}
+
+img, video, iframe, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 1) Header / Menu mobile ---------------------------------- */
+@media (max-width: 768px) {
+    .nav-container {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+    }
+
+    /* 300px cortava email + idioma — agora comporta tudo */
+    .nav-container.active {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    /* Remove o deslocamento herdado do desktop */
+    .lang-switch {
+        top: 0;
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+        padding: 15px 20px;
+    }
+
+    .lang-switch button {
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        min-height: 44px !important;
+    }
+
+    /* Hamburger -> "X" centralizado */
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Logo nunca deve empurrar o hamburger p/ fora */
+    .logo {
+        min-width: 0;
+        max-width: 70%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo { font-size: 0.85rem; gap: 6px; }
+}
+
+/* 2) Category Strip ---------------------------------------- */
+@media (max-width: 950px) {
+    .category-strip {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        overflow-x: auto;
+        background: white;
+        border-bottom: 2px solid var(--borda);
+        box-shadow: none;
+        padding: 8px 12px;
+        gap: 5px;
+    }
+
+    .cat-item {
+        flex: 0 0 auto;
+        width: auto;
+        white-space: nowrap;
+        text-align: left;
+        justify-content: flex-start;
+        border: none;
+        border-right: 1px solid var(--borda);
+        border-radius: 0;
+        background: transparent;
+        transform: none;
+    }
+
+    .cat-item:hover {
+        transform: none;
+        background: #eef2f7;
+    }
+}
+
+/* 3) Carrossel de Produtos --------------------------------- */
+@media (max-width: 768px) {
+    .carousel-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;               /* anula o 0 50px do 480px */
+        position: relative;
+    }
+
+    .carousel-wrapper { width: 100%; position: relative; }
+
+    /* Botões sobre a imagem, sempre dentro da tela */
+    .carousel-btn {
+        position: absolute;
+        top: 35%;
+        transform: translateY(-50%);
+        width: 44px;
+        height: 44px;
+        z-index: 10;
+        background: rgba(255, 255, 255, 0.95);
+        border: 1px solid var(--borda);
+        box-shadow: var(--sombra-media);
+    }
+
+    .carousel-prev { left: 6px; }
+    .carousel-next { right: 6px; }
+
+    .carousel-item { min-width: 100%; }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .carousel-item { min-width: calc(50% - 10px); } /* 2 por vez */
+}
+
+/* 4) Subprodutos: em tablets o dropdown lateral furava a tela */
+@media (max-width: 1024px) {
+    .subproducts {
+        position: static;
+        width: auto;
+        box-shadow: none;
+        border-radius: 0 0 12px 12px;
+        border-top: none;
+    }
+
+    .subproducts.open-left { left: auto; right: auto; }
+
+    /* Evita "linha fantasma" quando fechado */
+    .subproducts:not(.open) {
+        border-width: 0;
+        padding: 0;
+    }
+
+    .subproducts-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .subproducts-grid { grid-template-columns: 1fr; }
+    .subproducts.open { padding: 16px; }
+}
+
+/* 5) Hero: min() impede overflow em 300–320px --------------- */
+@media (max-width: 480px) {
+    .conversion-cards {
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(min(100%, 280px), 1fr)
+        );
+    }
+}
+
+/* 6) Carrossel Missão/Visão/Valores ------------------------ */
+@media (max-width: 768px) {
+    .mvv-carousel {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        overflow: visible;
+    }
+
+    .mvv-slides { flex: 0 0 100%; order: 1; }
+
+    .mvv-prev,
+    .mvv-next {
+        position: static;
+        order: 2;
+        width: 44px;
+        height: 44px;
+        margin: 0;
+        transform: none !important;
+    }
+
+    .mvv-prev:hover,
+    .mvv-next:hover { transform: scale(1.08) !important; }
+
+    .mvv-indicators { flex: 0 0 100%; order: 3; }
+}
+
+/* Bug herdado: .mvv-prev estava sem "left" no desktop */
+@media (min-width: 769px) {
+    .mvv-prev { left: 0; }
+}
+
+/* 7) Área de toque maior nos indicadores -------------------- */
+.carousel-dot,
+.mvv-dot { position: relative; }
+
+.carousel-dot::after,
+.mvv-dot::after {
+    content: '';
+    position: absolute;
+    inset: -10px;
+}
+
+/* 8) Desabilita transformações de hover em toque ------------ */
+@media (hover: none) and (pointer: coarse) {
+    .carousel-item:hover,
+    .subproduct-item:hover,
+    .partner-item:hover,
+    .cert-item:hover,
+    .mvv-card:hover {
+        transform: none;
+        box-shadow: var(--sombra-leve);
+        border-color: transparent;
+    }
+
+    .nav-email-link:hover { transform: none; }
+    header:hover { box-shadow: var(--sombra-leve); }
+}
+
+/* 9) Alvos de toque mínimos --------------------------------- */
+@media (max-width: 768px) {
+    nav a,
+    .nav-email-link,
+    .menu-toggle,
+    .carousel-btn,
+    .product-card-toggle,
+    .mvv-prev,
+    .mvv-next { min-height: 44px; }
+
+    .btn-main { min-height: 48px; }
+}
+
+@media (max-width: 480px) {
+    .category-strip {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        overflow: visible;
+        justify-content: initial;
+        gap: 8px 4px;
+        padding: 8px 12px;
+    }
+
+    .cat-item {
+        width: auto;
+        min-width: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        white-space: normal;
+        text-align: center;
+        font-size: 0.7rem;
+        padding: 8px 2px;
+        border: none;
+    }
+
+    .cat-item:nth-child(4) {
+        grid-column: 2;
+    }
+
+    .cat-item:nth-child(5) {
+        grid-column: 3;
+    }
+
+    .cat-item span {
+        margin-left: 4px;
     }
 }
