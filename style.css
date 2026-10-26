@@ -535,6 +535,7 @@ nav a:hover::after {
 /* Responsividade para mobile */
 @media (max-width: 950px) {
     .category-strip {
+        
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
@@ -546,6 +547,11 @@ nav a:hover::after {
         background: white;
         border-bottom: 2px solid var(--borda);
         box-shadow: none;
+
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        overflow: visible;
+        justify-content: initial;
     }
 
     .cat-item {
